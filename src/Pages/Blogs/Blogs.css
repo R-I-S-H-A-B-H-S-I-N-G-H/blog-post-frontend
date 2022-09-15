@@ -1,0 +1,18 @@
+.blogs-wrapper {
+	/* background-color: yellow; */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.blog-heading {
+	color: blue;
+	text-align: center;
+	font-size: 3.6rem;
+	font-weight: bolder;
+}
+.blog-items {
+	/* background-color: aqua; */
+	width: max-content;
+	padding: 1rem;
+}
