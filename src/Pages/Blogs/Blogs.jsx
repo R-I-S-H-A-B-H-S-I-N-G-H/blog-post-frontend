@@ -14,19 +14,37 @@ async function getBlogs() {
 export default function Blogs() {
 	const [blogdata, setblogdata] = useState([]);
 	async function setData() {
+		var temp = [];
+		setblogdata(temp);
+		for (var i = 0; i < 10; i++) {
+			temp.push({
+				blog: null,
+				createdAt: null,
+				description: null,
+				title: null,
+				updatedAt: null,
+				__v: null,
+				_id: null,
+			});
+		}
+		setblogdata(temp);
 		const res = await getBlogs();
 		setblogdata(res);
 	}
 	useEffect(() => {
 		setData();
 	}, []);
-	if (blogdata.length === 0) return <>LOADING</>;
+
 	return (
 		<div className="blogs-wrapper">
-			<h1 className="blog-heading">Code Blogs</h1>
 			<div className="blog-items">
-				{blogdata.map((ele) => {
-					return <Blog_item key={ele._id} data={ele} />;
+				{blogdata.map((ele, index) => {
+					return (
+						<Blog_item
+							key={ele._id === null ? index.toString() : ele._id}
+							data={ele}
+						/>
+					);
 				})}
 			</div>
 		</div>

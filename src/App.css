@@ -4,3 +4,10 @@
 	margin: 0;
 	font-family: "Roboto", sans-serif;
 }
+.app-wrapper {
+	display: flex;
+	flex-direction: column;
+	/* background-color: aqua; */
+	align-items: center;
+	justify-content: center;
+}

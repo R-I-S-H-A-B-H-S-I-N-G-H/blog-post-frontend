@@ -6,6 +6,7 @@ import URL from "../../Variables";
 // import { dark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { dark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import "./Create-Blog.css";
+import Header from "../../components/Header/Header";
 
 export default function CreateBlog() {
 	const navigate = useNavigate();

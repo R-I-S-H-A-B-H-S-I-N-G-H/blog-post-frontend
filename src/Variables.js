@@ -1,2 +1,2 @@
-const URL = "http://localhost:3001";
+const URL = "https://blogsapi.glitch.me";
 export default URL;

@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import "./Blog_item.css";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
 const dummydata = {
 	blog: "<p><code>this is part of code</code></p>\n",
@@ -12,6 +14,7 @@ const dummydata = {
 };
 
 function timestamptodate(d) {
+	if (d === null) return null;
 	const date = new Date(d);
 	return `${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`;
 }
@@ -28,10 +31,10 @@ export default function Blog_item(props) {
 				}}
 				className="blog-item-title"
 			>
-				{blogdata.title}
+				{blogdata.title || <Skeleton />}
 			</Link>
-			<p>{timestamptodate(blogdata.createdAt)}</p>
-			<p>{blogdata.description}</p>
+			<p>{timestamptodate(blogdata.createdAt) || <Skeleton />}</p>
+			<p>{blogdata.description || <Skeleton />}</p>
 			<Link to={`/blogs/${blogdata._id}`}>Read More</Link>
 		</div>
 	);
