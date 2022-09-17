@@ -1,0 +1,40 @@
+.markdown-output-area {
+	/* background-color: aqua; */
+	padding: 0.5rem;
+}
+.markdown-output-area * {
+	max-width: 100%;
+}
+.markdown-output-area p {
+	margin: 0.5rem;
+}
+
+.markdown-output-area li {
+	margin-left: 1.5rem;
+}
+.markdown-output-area h1,
+h2,
+h3 {
+	margin-bottom: 0.5rem;
+	margin-left: 0rem;
+}
+.markdown-output-area > p > a > img {
+	border-radius: 0.5rem;
+}
+.markdown-output-area > p > img {
+	border-radius: 0.5rem;
+}
+.markdown-output-area > img {
+	border-radius: 0.5rem;
+}
+.markdown-output-area > pre {
+	background-color: rgb(214, 215, 196);
+	padding: 1rem;
+	border-radius: 0.5rem;
+	margin: 0.5rem;
+	overflow: auto;
+}
+.markdown-output-area > pre > code {
+	/* background-color: aqua; */
+	color: rgb(58, 37, 37);
+}

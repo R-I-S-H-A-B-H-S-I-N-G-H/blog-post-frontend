@@ -1,26 +1,32 @@
 .blog-item-wrapper {
-	width: 100%;
-	height: 10rem;
+	/* background-color: aqua; */
+	max-width: 40vw;
+	height: max-content;
 	padding: 0.5rem;
 
 	margin: 0.5rem;
 }
 
 .blog-item-wrapper p {
-	padding-top: 0.5rem;
+	padding: 0.5rem 0rem;
+	/* background-color: aquamarine; */
 }
 
 .blog-item-title {
-	text-decoration: none;
 	color: black;
 	font-size: 1.6rem;
 	font-weight: 600;
-}
-.blog-item-wrapper a {
+	height: 100rem;
 	text-decoration: none;
 }
+
 .blog-item-title:hover {
+	color: blue;
 	cursor: pointer;
+	text-decoration: underline;
+	text-decoration-color: blue;
+
+	transition: 100ms ease-in;
 }
 .blog-item-wrapper:hover {
 	border-width: 2rem;

@@ -7,7 +7,7 @@ async function getBlogs() {
 	// console.log(URI);
 	var res = await fetch(`${URL}/blogs`);
 	res = await res.json();
-	// console.log(res);
+	console.log(res[0]);
 	return res;
 }
 
