@@ -20,7 +20,7 @@ export default function Blog_Page(params) {
 	async function getData() {
 		const res = await getBlogByid(id);
 		setblogdata(res);
-		console.log(res);
+		// console.log(res);
 	}
 	useEffect(() => {
 		getData();
@@ -30,10 +30,12 @@ export default function Blog_Page(params) {
 
 	return (
 		<div className={styles.blogPageWrapper}>
-			{/* <h1>{blogData.title}</h1>
-			<h5>{blogData.createdAt}</h5>
-			<p>{blogData.description}</p> */}
-			<Markdown data={blogData.blog} />
+			<div className={styles.blogPageContainer}>
+				<h1>{blogData.title}</h1>
+				<h5>{blogData.createdAt}</h5>
+				<p>{blogData.description}</p>
+				<Markdown data={blogData.blog} />
+			</div>
 		</div>
 	);
 }

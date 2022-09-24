@@ -6,6 +6,7 @@
 	align-items: center;
 	justify-content: center;
 }
+
 .blog-heading {
 	color: blue;
 	text-align: center;
@@ -15,6 +16,6 @@
 .blog-items {
 	/* background-color: aqua; */
 	min-width: 20rem;
-	width: max-content;
-	padding: 1rem;
+	width: fit-content;
+	/* padding: 1rem; */
 }

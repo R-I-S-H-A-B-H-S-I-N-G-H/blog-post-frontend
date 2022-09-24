@@ -4,6 +4,10 @@
 	margin: 0;
 	font-family: "Roboto", sans-serif;
 }
+* {
+	/* background-color: rgba(0, 0, 0, 0.22); */
+	/* border: solid 1px lightblue; */
+}
 .app-wrapper {
 	display: flex;
 	flex-direction: column;
