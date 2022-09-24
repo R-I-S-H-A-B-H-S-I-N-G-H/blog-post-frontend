@@ -3,7 +3,7 @@ import "./Blog_item.css";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
-const dummydata = {
+const datastructure = {
 	blog: "<p><code>this is part of code</code></p>\n",
 	createdAt: "2022-09-13T18:58:29.264Z",
 	description: "sdfsdfdf",
@@ -19,7 +19,6 @@ function timestamptodate(d) {
 	return `${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`;
 }
 export default function Blog_item(props) {
-	// console.log(props.data);
 	if (!props.data) return <>LOADING</>;
 	const blogdata = props.data;
 	return (
@@ -34,7 +33,7 @@ export default function Blog_item(props) {
 				{blogdata.title || <Skeleton />}
 			</Link>
 			<p>{timestamptodate(blogdata.createdAt) || <Skeleton />}</p>
-			<p>{blogdata.description || <Skeleton />}</p>
+			<p className="blog-description">{blogdata.description || <Skeleton />}</p>
 			<Link to={`/blogs/${blogdata._id}`}>Read More</Link>
 		</div>
 	);

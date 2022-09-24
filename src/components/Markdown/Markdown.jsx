@@ -5,9 +5,9 @@ import "./Markdown.css";
 
 import DOMPurify from "isomorphic-dompurify";
 
-export default function Markdown(props) {
-	var data = props.data;
+export default function Markdown({ data }) {
 	var [markdown, setmarkdown] = useState("");
+
 	useEffect(() => {
 		var dirtyHTML = marked(data, {
 			breaks: true,
@@ -29,7 +29,7 @@ export default function Markdown(props) {
 	}
 	return (
 		<div
-			className="markdown-output-area"
+			className="markdown-body"
 			dangerouslySetInnerHTML={createMarkup(markdown)}
 		></div>
 	);
