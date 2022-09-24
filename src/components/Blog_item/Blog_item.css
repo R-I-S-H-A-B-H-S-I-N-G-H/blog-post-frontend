@@ -19,7 +19,8 @@
 	height: 100rem;
 	text-decoration: none;
 }
-
+.blog-item-wrapper > p {
+}
 .blog-item-title:hover {
 	color: blue;
 	cursor: pointer;

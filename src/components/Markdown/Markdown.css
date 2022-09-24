@@ -1,40 +1,155 @@
-.markdown-output-area {
-	/* background-color: aqua; */
-	padding: 0.5rem;
+h1 {
+	font-family: Consolas, monaco, monospace;
+	font-size: 23px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 700;
+	line-height: 23px;
 }
-.markdown-output-area * {
-	max-width: 100%;
+h3 {
+	font-family: Consolas, monaco, monospace;
+	font-size: 17px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 700;
+	line-height: 23px;
 }
-.markdown-output-area p {
-	margin: 0.5rem;
+p {
+	font-family: Consolas, monaco, monospace;
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 23px;
+}
+blockquote {
+	font-family: Consolas, monaco, monospace;
+	font-size: 17px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 23px;
+}
+pre {
+	font-family: Consolas, monaco, monospace;
+	font-size: 11px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 23px;
 }
 
-.markdown-output-area li {
+.markdown-body {
+	/* background-color: aqua; */
+	padding: 0.5rem;
+	box-sizing: border-box;
+}
+/* .markdown-body * {
+	max-width: 100%;
+	margin-bottom: 0.5rem;
+	margin-top: 1rem;
+	border: 1px solid blue;
+} */
+.markdown-body > * {
+	margin-top: 0;
+	margin-bottom: 16px;
+}
+.markdown-body p {
+	margin: 0.5rem;
+}
+.markdown-body li + li {
+	margin-top: 0.25em;
+}
+.markdown-body li {
 	margin-left: 1.5rem;
 }
-.markdown-output-area h1,
+.markdown-body h1,
 h2,
 h3 {
-	margin-bottom: 0.5rem;
-	margin-left: 0rem;
+	padding-bottom: 0.3em;
+	margin-top: 24px;
+	margin-bottom: 16px;
+	font-weight: 600;
+	line-height: 1.25;
 }
-.markdown-output-area > p > a > img {
+.markdown-body h1 {
+	padding-bottom: 0.3em;
+	font-size: 2em;
+	border-bottom: 1px solid hsl(210deg 18% 83%);
+}
+.markdown-body h2 {
+	font-size: 1.5em;
+	border-bottom: 1px solid rgb(216 222 228);
+}
+.markdown-body h2,
+.markdown-body h3 {
+	font-size: 1.25em;
+}
+/* ul and ol list */
+.markdown-body > ul,
+.markdown-body > ol {
+	padding-left: 2em;
+}
+.markdown-body > ul {
+	display: block;
+	list-style-type: disc;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	padding-inline-start: 40px;
+}
+.markdown-body > ol {
+	display: block;
+	list-style-type: decimal;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	padding-inline-start: 40px;
+}
+.markdown-body > ul > li,
+.markdown-body > ol > li {
+	display: list-item;
+	text-align: -webkit-match-parent;
+}
+
+/* ul and ol list ends */
+
+/* img */
+.markdown-body img {
+	max-width: 100%;
+	box-sizing: content-box;
+	background-color: var(--color-canvas-default);
+}
+
+/* .markdown-body > p > a > img {
 	border-radius: 0.5rem;
 }
-.markdown-output-area > p > img {
+.markdown-body > p > img {
 	border-radius: 0.5rem;
 }
-.markdown-output-area > img {
+.markdown-body > img {
 	border-radius: 0.5rem;
-}
-.markdown-output-area > pre {
-	background-color: rgb(214, 215, 196);
+} */
+/* img end */
+
+/* .markdown-body > pre {
+	background-color: #f6f8fa;
 	padding: 1rem;
 	border-radius: 0.5rem;
 	margin: 0.5rem;
 	overflow: auto;
+} */
+.markdown-body > pre {
+	padding: 16px;
+	overflow: auto;
+	font-size: 90%;
+	line-height: 1.45;
+	background-color: #f6f8fa;
+	border-radius: 6px;
 }
-.markdown-output-area > pre > code {
+.markdown-body > pre > code {
 	/* background-color: aqua; */
-	color: rgb(58, 37, 37);
+	color: #2c2c2c;
 }

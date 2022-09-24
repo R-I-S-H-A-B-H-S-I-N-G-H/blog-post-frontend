@@ -4,10 +4,18 @@ import "./Blogs.css";
 import URL from "../../Variables";
 
 async function getBlogs() {
+	const desLen = 200;
 	// console.log(URI);
 	var res = await fetch(`${URL}/blogs`);
 	res = await res.json();
 	console.log(res[0]);
+	for (var i = 0; i < res.length; i++) {
+		if (res[i].description.length > desLen) {
+			res[i].description = res[i].description.substring(0, desLen - 3);
+			res[i].description = res[i].description.trim() + ".....";
+			console.log(res[i].description);
+		}
+	}
 	return res;
 }
 
