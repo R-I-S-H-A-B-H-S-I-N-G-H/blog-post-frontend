@@ -1,5 +1,21 @@
 .blogPageWrapper {
-	width: 70%;
-	/* background: lightblue; */
-	padding: 1rem;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.blogPageContainer > h1,
+.blogPageContainer > h5,
+.blogPageContainer > p {
+	color: #1f222e;
+}
+.blogPageContainer {
+	width: 60%;
+}
+@media screen and (max-width: 650px) {
+	.blogPageContainer {
+		width: 90%;
+	}
 }

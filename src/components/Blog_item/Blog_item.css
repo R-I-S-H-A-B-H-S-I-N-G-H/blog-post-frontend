@@ -13,14 +13,14 @@
 }
 
 .blog-item-title {
-	color: black;
-	font-size: 1.6rem;
+	min-width: 100%;
+	color: #1f222e;
+	font-size: clamp(1.5rem, 2.5vw, 4rem);
 	font-weight: 600;
 	height: 100rem;
 	text-decoration: none;
 }
-.blog-item-wrapper > p {
-}
+
 .blog-item-title:hover {
 	color: blue;
 	cursor: pointer;
@@ -29,8 +29,10 @@
 
 	transition: 100ms ease-in;
 }
-.blog-item-wrapper:hover {
-	border-width: 2rem;
-	border-color: black;
-	/* background-color: aqua; */
+
+@media screen and (max-width: 650px) {
+	.blog-item-wrapper {
+		/* background-color: aqua; */
+		max-width: 90vw;
+	}
 }

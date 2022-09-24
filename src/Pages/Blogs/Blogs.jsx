@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Blog_item from "../../components/Blog_item/Blog_item";
 import "./Blogs.css";
 import URL from "../../Variables";
+import { Link } from "react-router-dom";
 
 async function getBlogs() {
 	const desLen = 200;
@@ -45,6 +46,7 @@ export default function Blogs() {
 
 	return (
 		<div className="blogs-wrapper">
+			<Link to="/blogs/new">Create New Blog</Link>
 			<div className="blog-items">
 				{blogdata.map((ele, index) => {
 					return (

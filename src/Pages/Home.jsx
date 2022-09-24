@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import URL from "../Variables";
 
 async function initializeAPI() {
@@ -11,7 +12,11 @@ function Home() {
 	useEffect(() => {
 		initializeAPI();
 	}, []);
-	return <>home</>;
+	return (
+		<>
+			<Link to="/blogs">GO TO BLOGS</Link>
+		</>
+	);
 }
 
 export default Home;

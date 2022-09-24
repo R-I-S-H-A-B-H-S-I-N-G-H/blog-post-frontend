@@ -21,7 +21,7 @@ export default function Markdown({ data }) {
 		// // setmarkdown(dirtyHTML);
 		const clean = DOMPurify.sanitize(marked.parse(dirtyHTML));
 		setmarkdown(clean);
-		console.log(clean);
+		// console.log(clean);
 	}, [data]);
 
 	function createMarkup(m) {

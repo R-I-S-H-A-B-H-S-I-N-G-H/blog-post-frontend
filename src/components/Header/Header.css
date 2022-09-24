@@ -1,5 +1,7 @@
 .header-wrapper {
-	font-size: 4rem;
-	padding: 1rem;
+	font-size: clamp(1rem, 10vw, 4rem);
+	color: #1f222e;
+	/* padding: 1rem; */
+	margin: 1rem 0rem;
 	font-weight: bold;
 }
