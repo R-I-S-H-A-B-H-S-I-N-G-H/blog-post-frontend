@@ -14,8 +14,8 @@ export default function Markdown({ data }) {
 			gfm: true,
 			headerIds: true,
 			// sanitize: true,
-			smartypants: true,
-		});
+			smartypants: true,ADD_TAGS: ["iframe"], ADD_ATTR: ['allow', 'allowfullscreen', 'frameborder', 'scrolling'] });
+		
 		// const clean = DOMPurify.sanitize(dirtyHTML);
 		// setmarkdown(clean);
 		// // setmarkdown(dirtyHTML);
