@@ -25,8 +25,7 @@ export default function Blogs() {
 	const [blogdata, setblogdata] = useState([]);
 	async function setData() {
 		var temp = [];
-		setblogdata(temp);
-		for (var i = 0; i < 10; i++) {
+		for (var i = 0; i < 5; i++) {
 			temp.push({
 				blog: null,
 				createdAt: null,
