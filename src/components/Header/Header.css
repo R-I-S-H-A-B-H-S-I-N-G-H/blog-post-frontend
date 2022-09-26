@@ -1,7 +1,14 @@
 .header-wrapper {
-	font-size: clamp(1rem, 10vw, 4rem);
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.header-container {
+	font-size: clamp(1rem, 10vw, 3.2rem);
 	color: #1f222e;
 	/* padding: 1rem; */
 	margin: 1rem 0rem;
 	font-weight: bold;
+	width: 65%;
 }

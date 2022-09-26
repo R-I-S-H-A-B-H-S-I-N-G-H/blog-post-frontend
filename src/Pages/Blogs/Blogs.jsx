@@ -3,6 +3,7 @@ import Blog_item from "../../components/Blog_item/Blog_item";
 import "./Blogs.css";
 import URL from "../../Variables";
 import { Link } from "react-router-dom";
+import Header from "../../components/Header/Header";
 
 async function getBlogs() {
 	const desLen = 200;
@@ -46,7 +47,9 @@ export default function Blogs() {
 
 	return (
 		<div className="blogs-wrapper">
-			<Link to="/blogs/new">Create New Blog</Link>
+			<div className="create-newblog">
+				<Link to="/blogs/new">Create New Blog</Link>
+			</div>
 			<div className="blog-items">
 				{blogdata.map((ele, index) => {
 					return (

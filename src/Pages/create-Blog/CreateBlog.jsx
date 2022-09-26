@@ -1,16 +1,11 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+
 import URL from "../../Variables";
-// import { dark } from "react-syntax-highlighter/dist/esm/styles/prism";
-import { dark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import "./Create-Blog.css";
-import Header from "../../components/Header/Header";
 
 // markdown imports
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
-import rehypeRaw from "rehype-raw";
+
 import Markdown from "../../components/Markdown/Markdown";
 
 export default function CreateBlog() {
@@ -45,7 +40,7 @@ export default function CreateBlog() {
 
 	return (
 		<div className="createnew-blog-wrapper">
-			<h1>Create New Blog</h1>
+			<h1 className="createblog-title">Create New Blog</h1>
 			<div className="createnew-blog">
 				<label>
 					Title

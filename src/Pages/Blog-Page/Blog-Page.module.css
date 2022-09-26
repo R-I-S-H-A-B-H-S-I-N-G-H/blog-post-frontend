@@ -11,6 +11,12 @@
 .blogPageContainer > p {
 	color: #1f222e;
 }
+.blogPageContainer > h5 {
+	margin-bottom: 1rem;
+	font-size: 0.7em;
+	color: #1f222ea5;
+	font-weight: bold;
+}
 .blogPageContainer {
 	width: 60%;
 }
