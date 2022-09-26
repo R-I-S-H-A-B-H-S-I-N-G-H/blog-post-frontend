@@ -87,13 +87,10 @@ export default function CreateBlog() {
 						/>
 					)}
 				</div>
-				{!previewMarkdown ? (
-					<button onClick={() => submitdata()} className="submit-blog">
-						Submit
-					</button>
-				) : (
-					<></>
-				)}
+
+				<button onClick={() => submitdata()} className="submit-blog">
+					Submit
+				</button>
 			</div>
 		</div>
 	);
