@@ -13,6 +13,7 @@ export default function CreateBlog() {
 	const [title, setTitle] = useState("");
 	const [description, setDescription] = useState("");
 	const [blog, setBlog] = useState("");
+	const [previewMarkdown, setPreviewMarkdown] = useState(false);
 
 	async function submitdata() {
 		if (title.length === 0 || description.length === 0 || blog.length === 0)
@@ -61,23 +62,38 @@ export default function CreateBlog() {
 						name="Description"
 					/>
 				</label>
-				<label>
-					Blog
-					<textarea
-						className="blog"
-						value={blog}
-						onChange={(e) => {
-							setBlog(e.target.value);
-							// console.log(e.target.value);
-						}}
-						type="text"
-						name="Blog"
-					/>
-					<Markdown data={blog} />
-				</label>
-				<button onClick={() => submitdata()} className="submit-blog">
-					Submit
-				</button>
+
+				<label>Blog</label>
+				<div>
+					<div className="markdown-btn">
+						<button onClick={() => setPreviewMarkdown(!previewMarkdown)}>
+							toggle markdown
+						</button>
+					</div>
+					{previewMarkdown ? (
+						<div className="markdown-preview">
+							<Markdown data={blog} />
+						</div>
+					) : (
+						<textarea
+							className="blog"
+							value={blog}
+							onChange={(e) => {
+								setBlog(e.target.value);
+								// console.log(e.target.value);
+							}}
+							type="text"
+							name="Blog"
+						/>
+					)}
+				</div>
+				{!previewMarkdown ? (
+					<button onClick={() => submitdata()} className="submit-blog">
+						Submit
+					</button>
+				) : (
+					<></>
+				)}
 			</div>
 		</div>
 	);
