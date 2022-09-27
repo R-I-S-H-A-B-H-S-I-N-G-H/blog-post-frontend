@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import uuid from "react-uuid";
 import "./Markdown.css";
 
-import DOMPurify from "isomorphic-dompurify";
+import DOMPurify from "dompurify";
 
 export default function Markdown({ data }) {
 	var [markdown, setmarkdown] = useState("");
@@ -13,13 +13,16 @@ export default function Markdown({ data }) {
 			breaks: true,
 			gfm: true,
 			headerIds: true,
-			// sanitize: true,
-			smartypants: true,ADD_TAGS: ["iframe"], ADD_ATTR: ['allow', 'allowfullscreen', 'frameborder', 'scrolling'] });
-		
+			smartypants: true,
+		});
+		console.log(dirtyHTML);
 		// const clean = DOMPurify.sanitize(dirtyHTML);
 		// setmarkdown(clean);
 		// // setmarkdown(dirtyHTML);
-		const clean = DOMPurify.sanitize(marked.parse(dirtyHTML));
+		var config = {
+			ADD_TAGS: ["iframe"],
+		};
+		const clean = DOMPurify.sanitize(dirtyHTML, config);
 		setmarkdown(clean);
 		// console.log(clean);
 	}, [data]);
